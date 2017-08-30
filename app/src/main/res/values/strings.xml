@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">App2</string>
+    <string name="bienvenido">Bienvenido!</string>
+    <string name="editText">Ingrese algo</string>
+    <string name="boton">Cambiar!</string>
+    <string name="botonN">Otro cambio!</string>
+    <string name="reset">Reset!</string>
+    <string name="mensaje">Escriba algo y aprete los botones</string>
+</resources>

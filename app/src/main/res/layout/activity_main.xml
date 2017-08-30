@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android='http://schemas.android.com/apk/res/android'
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width='match_parent'
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <!-- context para indicar su código lógico
+    creo que no es necesario-->
+    <LinearLayout
+        android:id="@+id/layoutInterno"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/imagen"
+            android:layout_width="96dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/huella"
+            android:layout_weight="0.01"/>
+        <TextView
+            android:id="@+id/Bienvenido"
+            android:text="@string/bienvenido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:textColor="#000000"/>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mensaje"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:layout_marginTop="3mm"
+        android:layout_marginBottom="3mm"/>
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/editText"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <Button
+            android:id="@+id/boton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/boton"
+            android:layout_weight="0.50"/>
+        <Button
+            android:id="@+id/botonN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/botonN"
+            />
+
+        <Button
+            android:id="@+id/botonR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.38"
+            android:text="@string/reset"/>
+    </LinearLayout>
+
+
+</LinearLayout>
+
