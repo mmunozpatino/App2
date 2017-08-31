@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
     TextView saludo;
     EditText et;
     String texto;
-    Button boton, botonN, botonR, botonT, botonA, botonS, botonLV, botonCT;
+    Button botonT, botonA, botonS, botonLV, botonCT, botonWV;
     LinearLayout ln;
     SensorManager sm;
     Sensor sensor;
@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         botonS = (Button) findViewById(R.id.Bsensor);
         botonLV = (Button) findViewById(R.id.botonLV);
         botonCT = (Button) findViewById(R.id.botonCT);
+        botonWV = (Button) findViewById(R.id.botonWV);
 
         ln = (LinearLayout) findViewById(R.id.mainlo);
 
@@ -49,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         botonS.setOnClickListener(this);
         botonLV.setOnClickListener(this);
         botonCT.setOnClickListener(this);
+        botonWV.setOnClickListener(this);
         //et.setText("cambiamos texto");
         //Relaciono el textview que hice antes
         /*saludo = (TextView) findViewById(R.id.Bienvenido);
@@ -95,6 +97,10 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
             case R.id.botonCT:
                 Intent cambiar = new Intent(this, ChangeTitleActivity.class);
                 startActivity(cambiar);
+                break;
+            case R.id.botonWV:
+                Intent web = new Intent(this, WebViewActivity.class);
+                startActivity(web);
                 break;
         }
     }
