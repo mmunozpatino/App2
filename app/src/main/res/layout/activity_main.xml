@@ -35,47 +35,17 @@
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="3mm"
-        android:layout_marginTop="3mm"
-        android:text="@string/mensaje"
-        android:textColor="#000000"
-        android:textSize="20dp"/>
-
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/et"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/editText"
-        />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="1">
-        <Button
-            android:id="@+id/boton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/boton"
-            android:layout_weight="0.50"/>
-        <Button
-            android:id="@+id/botonN"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/botonN"
-            />
+        android:layout_height="wrap_content"/>
 
-        <Button
-            android:id="@+id/botonR"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.38"
-            android:text="@string/reset"/>
-    </LinearLayout>
+    <Button
+        android:id="@+id/botonCT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cambio de titulo"
+        android:layout_marginTop="5dp"/>
     <Button
         android:id="@+id/botonT"
         android:layout_width="match_parent"

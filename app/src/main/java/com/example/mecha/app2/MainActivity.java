@@ -8,6 +8,7 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
     TextView saludo;
     EditText et;
     String texto;
-    Button boton, botonN, botonR, botonT, botonA, botonS, botonLV;
+    Button boton, botonN, botonR, botonT, botonA, botonS, botonLV, botonCT;
     LinearLayout ln;
     SensorManager sm;
     Sensor sensor;
@@ -30,26 +31,24 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
         setContentView(R.layout.activity_main);
 
         //enlace de parte grafica con lógica
-        et = (EditText) findViewById(R.id.editText);
+        et = (EditText) findViewById(R.id.et);
         saludo = (TextView) findViewById(R.id.Bienvenido);
-        boton = (Button) findViewById(R.id.boton);
-        botonN = (Button) findViewById(R.id.botonN);
-        botonR = (Button) findViewById(R.id.botonR);
         botonT = (Button) findViewById(R.id.botonT);
         botonA = (Button) findViewById(R.id.botonA);
         botonS = (Button) findViewById(R.id.Bsensor);
         botonLV = (Button) findViewById(R.id.botonLV);
+        botonCT = (Button) findViewById(R.id.botonCT);
 
         ln = (LinearLayout) findViewById(R.id.mainlo);
 
 
-        boton.setOnClickListener(this);
-        botonN.setOnClickListener(this);
-        botonR.setOnClickListener(this);
+
+
         botonT.setOnClickListener(this);
         botonA.setOnClickListener(this);
         botonS.setOnClickListener(this);
         botonLV.setOnClickListener(this);
+        botonCT.setOnClickListener(this);
         //et.setText("cambiamos texto");
         //Relaciono el textview que hice antes
         /*saludo = (TextView) findViewById(R.id.Bienvenido);
@@ -69,26 +68,21 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.boton:
-                String dato = et.getText().toString();
-                saludo.setText(dato);
-                break;
-            case R.id.botonN:
-                saludo.setText("boton 2");
-                break;
-            case R.id.botonR:
-                saludo.setText(R.string.bienvenido);
-                break;
             case R.id.botonT:
                 Toast.makeText(getApplicationContext(), "esto un toast", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.botonA:
                 String msj = et.getText().toString();
-                //paso contexto y cuál quiero crear
-                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
-                //nombre dee lo que mando y lo que mando
-                intent.putExtra("DATO", msj);
-                startActivity(intent);
+                if(TextUtils.isEmpty(msj)) {
+                    Toast.makeText(getApplicationContext(), "Complete el campo de texto!", Toast
+                            .LENGTH_SHORT).show();
+                }else {
+                    //paso contexto y cuál quiero crear
+                    Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                    //nombre dee lo que mando y lo que mando
+                    intent.putExtra("DATO", msj);
+                    startActivity(intent);
+                }
                 break;
             case R.id.Bsensor:
                 Intent intentS = new Intent(this, SensorActivity.class);
@@ -97,6 +91,10 @@ public class MainActivity extends AppCompatActivity implements OnClickListener, 
             case R.id.botonLV:
                 Intent view = new Intent(this, ListViewActivity.class);
                 startActivity(view);
+                break;
+            case R.id.botonCT:
+                Intent cambiar = new Intent(this, ChangeTitleActivity.class);
+                startActivity(cambiar);
                 break;
         }
     }

@@ -29,6 +29,8 @@
         </activity>
         <activity android:name=".ListViewActivity">
         </activity>
+        <activity android:name=".ChangeTitleActivity">
+        </activity>
     </application>
 
 </manifest>
