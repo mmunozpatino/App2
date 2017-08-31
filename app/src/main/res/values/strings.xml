@@ -6,4 +6,7 @@
     <string name="botonN">Otro cambio!</string>
     <string name="reset">Reset!</string>
     <string name="mensaje">Escriba algo y aprete los botones</string>
+    <string name="botonT">Lanzar Toast!</string>
+    <string name="botonA">Crear Nueva Actividad!</string>
+    <string name="botonS">Muestra Sensor</string>
 </resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/sensorln"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mecha.app2.SensorActivity"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/botonP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Probar sensor!"/>
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Proximidad sensor: "
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tvprox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="30dp"/>
+
+</LinearLayout>
