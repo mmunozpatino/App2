@@ -9,4 +9,5 @@
     <string name="botonT">Lanzar Toast!</string>
     <string name="botonA">Crear Nueva Actividad!</string>
     <string name="botonS">Muestra Sensor</string>
+    <string name="botonLV">List View</string>
 </resources>
