@@ -12,6 +12,11 @@ public class WebViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_web_view);
 
         WebView webView = (WebView) findViewById(R.id.webview);
+        //Para que el JS de la web funcione bien
+        webView.getSettings().setJavaScriptEnabled(true);
+        //habilito zoom
+        webView.getSettings().setBuiltInZoomControls(true);
+
         webView.loadUrl("http://www.codigofacilito.com");
     }
 }
